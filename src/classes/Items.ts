@@ -1,6 +1,8 @@
-import IItems from "@/interfaces/Items"
-import Item from "@/types/Item"
 import fs from 'fs'
+
+import IItems from "@/interfaces/Items"
+import Exception from "./Exception"
+import Item from "@/types/Item"
 
 class Items implements IItems {
     private items: Item[] = []
@@ -17,7 +19,7 @@ class Items implements IItems {
         const [item] = this.items.filter(({id}) => id === idItem)
 
         if(!item)
-            throw new Error("Item not found")
+            throw new Exception("Item not found", 404)
 
         return item
     }
