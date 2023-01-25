@@ -8,6 +8,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         switch(req.method) {
           case 'GET':
             return methodGet(req, res)
+          case 'DELETE':
+            return methodDelete(req, res)
           default:
             throw new Exception("Method not supported.", 400)
         }
@@ -22,4 +24,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 function methodGet(req: NextApiRequest, res: NextApiResponse) {
     const id = req.query.id as string
     return res.status(200).json((new Items()).getItem(parseInt(id)))
+}
+
+function methodDelete(req: NextApiRequest, res: NextApiResponse) {
+    const id = req.query.id as string
+    return res.status(200).json((new Items()).removeItem(parseInt(id)))
 }
