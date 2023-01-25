@@ -1,5 +1,5 @@
 export enum Type {
-    Route,
-    Link,
-    List
+    Route = "Route",
+    Link = "Link",
+    List = "List"
 }
