@@ -47,7 +47,7 @@ class Items implements IItems {
     }
 
     private saveItems() {
-        fs.writeFileSync("src/data/user.json", JSON.stringify(this.items, null, 4))
+        fs.writeFileSync("src/data/items.json", JSON.stringify(this.items, null, 4))
     }
 
 }
