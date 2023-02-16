@@ -1,6 +1,4 @@
-import { Box } from "@mui/material"
-
-import {Text, Img, Row} from './styles'
+import {Text, Img, Container} from './styles'
 
 interface LinkProps {
     text: string
@@ -10,9 +8,9 @@ interface LinkProps {
 
 export default function Link({text, image, alt}: LinkProps) {
     return (
-        <Row>
+        <Container>
             <Img src={image} alt={alt} width={40} height={40} />
             <Text>{text}</Text>
-        </Row>
+        </Container>
     )
 }
