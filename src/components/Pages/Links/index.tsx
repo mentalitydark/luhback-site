@@ -1,7 +1,7 @@
-import { Box, Typography } from "@mui/material";
 import Head from "next/head";
 import Link from "./Link";
-import { Container, Image } from "./styles";
+import { Container, Image, Content, Text } from "./styles";
+import { Box } from "@mui/material";
 
 export default function Links() {
     return (
@@ -12,15 +12,17 @@ export default function Links() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
           </Head>
           <Container>
-            <Box>
-                <Image alt='profile image' src={'/a.jpg'} width={200} height={200} />
-                <Typography>Luh Back</Typography>
+            <Content>
+                <Box>
+                  <Image alt='profile image' src={'/a.jpg'} width={100} height={100} />
+                  <Text>Luh Back</Text>
+                </Box>
                 <Link text='Telegram VIP' image="/a.jpg" alt="img"/>
                 <Link text='Telegram FREE' image="/a.jpg" alt="img"/>
                 <Link text='OnlyFans' image="/a.jpg" alt="img"/>
                 <Link text='Twitter' image="/a.jpg" alt="img"/>
                 <Link text='Instagram' image="/a.jpg" alt="img"/>
-            </Box>
+            </Content>
           </Container>
         </>
       )
