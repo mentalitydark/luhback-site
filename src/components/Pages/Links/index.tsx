@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "./Link";
-import { Container, Image, Content, Text } from "./styles";
+import { Container, Image, Content, Title } from "./styles";
 import { Box } from "@mui/material";
 
 export default function Links() {
@@ -14,14 +14,14 @@ export default function Links() {
           <Container>
             <Content>
                 <Box>
-                  <Image alt='profile image' src={'/a.jpg'} width={100} height={100} />
-                  <Text>Luh Back</Text>
+                  <Image alt='profile image' src={'/profile.jpg'} width={150} height={150} />
+                  <Title>Luh Back</Title>
                 </Box>
-                <Link text='Telegram VIP' image="/a.jpg" alt="img"/>
-                <Link text='Telegram FREE' image="/a.jpg" alt="img"/>
-                <Link text='OnlyFans' image="/a.jpg" alt="img"/>
-                <Link text='Twitter' image="/a.jpg" alt="img"/>
-                <Link text='Instagram' image="/a.jpg" alt="img"/>
+                <Link text='Telegram VIP' icon={'telegram'} href="https://t.me/LuhVipBot"/>
+                <Link text='Telegram Free' icon={'telegram'} external={false} href="/telegram"/>
+                <Link text='OnlyFans' icon={'onlyFans'} href="https://onlyfans.com/luhback"/>
+                <Link text='Twitter' icon={'twitter'} href="https://twitter.com/luuhback"/>
+                <Link text='Instagram' icon={'instagram'} href="https://www.instagram.com/luh.back/"/>
             </Content>
           </Container>
         </>
