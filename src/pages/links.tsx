@@ -1,4 +1,4 @@
-import _Links from '@/components/Pages/Links'
+import Page from '@/components/Pages/Links'
 export default function Links() {
-  return <_Links />
+  return <Page />
 }
